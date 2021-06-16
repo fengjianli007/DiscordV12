@@ -16,7 +16,7 @@ module.exports=async(bot,message)=>{
     if (cmd.length === 0) return;
     
     let command = bot.commands.get(cmd);
-    if (!command) command = bot.commands.get(bot.aliases.get(cmd));
+    if (!command) command = bot.aliases.get(cmd);
     
     if (command) {
         if(command.timeout){
