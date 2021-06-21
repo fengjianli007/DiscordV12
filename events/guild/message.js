@@ -31,6 +31,7 @@ module.exports=async(bot,message)=>{
                 }, command.timeout);
             }
         }else{
+            console.log(`${message.member.user.tag} ` + "执行了指令:", message.content)
             command.run(bot,message,args)
         }
 
